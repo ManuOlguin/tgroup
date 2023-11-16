@@ -1,11 +1,9 @@
-import Hero from '@/components/Hero';
-import CardsContainer from './CardsContainer';
+import SelectorFuncion from '@/components/SelectorFuncion';
 
 const HomeContainer = () => {
   return (
     <>
-      <Hero />
-      <CardsContainer />
+      <SelectorFuncion />
     </>
   );
 };

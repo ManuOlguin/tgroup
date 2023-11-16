@@ -1,15 +1,16 @@
 import Navbar from '@/components/Navbar';
-import AboutContainer from '@/containers/AboutContainer';
+import TareasContaniner from '@/containers/TareasContaniner';
 import Footer from '@/components/Footer';
 
-const AboutPage = () => {
+const tasksPage = () => {
   return (
     <>
       <Navbar />
-      <AboutContainer />
+      <TareasContaniner />
       <Footer />
     </>
   );
 };
 
-export default AboutPage;
+export default tasksPage;
+

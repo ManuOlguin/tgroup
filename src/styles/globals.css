@@ -7,6 +7,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+html{
+  background-color: white;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -26,14 +29,40 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-h2{
-  text-align: center;
-  font-size: xx-large;
-  margin-bottom: 40px;
-}
+
 
 h3{
   font-size: x-large;
   text-align: center;
   line-height: 30px;
+}
+
+.shadownav{
+  box-shadow: 0 4px 8px -6px #222;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.verdetg{
+  color: #3F928B;
+}
+
+.verdetgbg{
+  background-color: #3F928B;
+}
+
+#FF5A26
+.rojotg{
+  color: #FF5A26;
+}
+
+.rojotgbg{
+  background-color: #FF5A26;
+}
+
+.borde{
+  border-bottom: 1px #3f928b7b;
+}
+
+.tablaVar{
+  position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(522.5px, 3847.5px, 0px)
 }

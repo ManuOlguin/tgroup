@@ -11,6 +11,8 @@ const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [shows, setShows] = useState([]);
+  const [user, setUser] = useState({});
+
   const [show, setShow] = useState({});
   const [loading, setLoading] = useState(true);
   const [showLoading, setShowLoading] = useState(true);
@@ -25,6 +27,26 @@ export const AppContextProvider = ({ children }) => {
       setLoading(false);
     } catch (error) {
       console.log(error);
+    }
+  }, []);
+  const loginUser = useCallback(async (credentials) => {
+    const jsonArmado = JSON.stringify(credentials)
+    const headers = { 
+			'content-type': 'application/json; charset=utf-8'
+			 };
+    try {
+      axios.post('http://localhost:8080/login', 
+        jsonArmado, {headers}
+      )
+      .then(function (response) {
+        setUser(response.data);
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    } catch (error) {
+      console.log('ERRORRR user mal');
     }
   }, []);
 
@@ -51,6 +73,8 @@ export const AppContextProvider = ({ children }) => {
         shows,
         loading,
         getShow,
+        loginUser,
+        user,
         show,
         showLoading,
       }}
